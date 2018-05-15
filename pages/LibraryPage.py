@@ -15,6 +15,13 @@ assetPanelCss = "div.asset-panel-wrapper"
 
 # unselected
 assetTileCss = "div.tile.tile-medium"
+
+secondAssetTileCss = "main#asset-panel > div:nth-of-type(2)"
+thirdAssetTileCss = "main#asset-panel > div:nth-of-type(3)"
+fourthAssetTileCss = "main#asset-panel > div:nth-of-type(4)"
+fifthAssetTileCss = "main#asset-panel > div:nth-of-type(5)"
+
+
 # selected
 selectedAssetTileCss = "div.tile.tile-medium"
 
@@ -53,6 +60,20 @@ class LibraryPage(BasePage):
         first_asset = self.wait_until_element_clickable(5, "cssSelector", assetTileCss)
         first_asset.click()
 
+    def select_second_asset(self):
+        second_asset = self.wait_until_element_clickable(5, "cssSelector", secondAssetTileCss)
+        second_asset.click()
+
+    def select_third_to_fifth_asset(self):
+        third_asset = self.wait_until_element_clickable(5, "cssSelector", thirdAssetTileCss)
+        third_asset.click()
+
+        fourth_asset = self.wait_until_element_clickable(5, "cssSelector", fourthAssetTileCss)
+        fourth_asset.click()
+
+        fifth_asset = self.wait_until_element_clickable(5, "cssSelector", fifthAssetTileCss)
+        fifth_asset.click()
+
     def unselect_asset(self):
         first_asset = self.wait_until_element_clickable(5, "cssSelector", selectedAssetTileCss)
         first_asset.click()
@@ -78,5 +99,5 @@ class LibraryPage(BasePage):
     def unselect_kill_status_label(self):
         first_asset = self.wait_until_element_clickable(5, "cssSelector", assetTileCss)
         first_asset.click()
-        kill_status_label = self.wait_until_element_clickable(7, "cssSelector", unselectKillStatusLabelCss)
+        kill_status_label = self.wait_until_element_clickable(5, "cssSelector", unselectKillStatusLabelCss)
         kill_status_label.click()

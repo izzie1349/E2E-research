@@ -11,7 +11,7 @@ DONE: Select an asset
 Star rate an asset
 DONE: rate asset (approve, select,kill,alt)
 flag an asset
-select multiple assets
+DONE: select multiple assets
 DONE: unselect assets
 '''
 
@@ -30,6 +30,15 @@ class TestAssets(BaseTestCase, unittest.TestCase):
         library_page = LibraryPage(self.driver)
         library_page.select_asset()
         library_page.unselect_asset()
+
+    def test_select_multiple_assets(self):
+        '''
+        select the first 5 assets
+        '''
+        library_page = LibraryPage(self.driver)
+        library_page.select_asset()
+        library_page.select_second_asset()
+        library_page.select_third_to_fifth_asset()
 
     # status labels
     def test_unselect(self):
