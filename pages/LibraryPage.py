@@ -21,10 +21,8 @@ thirdAssetTileCss = "main#asset-panel > div:nth-of-type(3)"
 fourthAssetTileCss = "main#asset-panel > div:nth-of-type(4)"
 fifthAssetTileCss = "main#asset-panel > div:nth-of-type(5)"
 
-
 # selected
 selectedAssetTileCss = "div.tile.tile-medium"
-
 
 
 # STATUS LABELS
@@ -40,7 +38,6 @@ selectSelectStatusLabelCss = "div.status-label.status-label-select.sm"
 selectAltStatusLabelCss = "div.status-label.status-label-alt.sm"
 selectApproveStatusLabelCss = "div.status-label.status-label-approve.sm"
 selectKillStatusLabelCss = "status-label.status-label-kill.sm"
-
 
 class LibraryPage(BasePage):
 
